@@ -1,4 +1,4 @@
-var districts = {
+{
     "type": "FeatureCollection",
     "crs": {
         "type": "name",
