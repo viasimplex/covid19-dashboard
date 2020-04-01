@@ -1,7 +1,7 @@
 -- Create tables
 create table states(id int auto_increment primary key, name varchar(50), country_id int, geom geometry);
 create table countries(id int auto_increment primary key, country_code varchar(2) NOT NULL default '', country_name varchar(100) NOT NULL default '');
-create table districts(id int auto_increment primary key, name varchar(50), district_census_code int, state_census_code int, census_code int, state_id int);
+create table districts(id int auto_increment primary key, name varchar(50), district_census_code int, state_census_code int, census_code int, state_id int, geom geometry);
 create table patients(id int auto_increment primary key, state_patient_number varchar(25), date_announced date, age_bracket varchar(10), gender varchar(1), detected_city varchar(50), detected_district_id int, detected_state_id int, current_status varchar(30), notes varchar(100), contracted_from int, nationality int, transmission_type varchar(30), status_change_date date, source1 varchar(500), source2 varchar(500), source3 varchar(500), backup_notes varchar(200));
 
 -- Add foreign key constraint to tables
